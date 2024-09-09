@@ -1,14 +1,25 @@
-import './App.css';
 
-function App() {
+import React from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import styled from "styled-components";
+
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">       
-        <p>
-          Hello
-        </p>      
-      </header>
-    </div>
+      <BrowserRouter>
+          <Header></Header>
+          <Routes>
+              <Route index element={<RegionListPage />} />
+              <Route path="sight-list" element={<SightListPage />} />
+              <Route path="story-list" element={<StoryListPage />} />
+              <Route path="story" element={<StoryPage />} />
+
+          </Routes>
+          
+      </BrowserRouter>
   );
 }
 
