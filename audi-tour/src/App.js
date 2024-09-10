@@ -5,9 +5,15 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import styled from "styled-components";
 
-function App(props) {
+//pages
+import Header from './component/Header';
+import RegionListPage from './page/RegionListPage';
+import SightListPage from './page/SightListPage';
+import StoryListPage from './page/StoryListPage';
+import StoryPage from './page/StoryPage';
+
+function App() {
   return (
       <BrowserRouter>
           <Header></Header>
